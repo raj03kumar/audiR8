@@ -1,0 +1,427 @@
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: #161616;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-size: 0.9em;
+    max-width: 35em;
+    line-height: 27px;
+}
+
+h1, h2{
+    font-weight: 300;
+}
+
+h1{
+    margin: 0.5em 0;
+    font-size: 3em;
+}
+
+.specs h2, .about h2{
+    font-size: 2em;
+    padding-left: 1.2em;
+    border-left: 0.1em #5bc7ca solid;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+section{
+    padding: 2.5em;
+}
+
+/* Set all flex layouts */
+nav, .infos, .info, 
+.specs-header, .specs li,
+.stats{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.specs, .icon, .panel:first-child,
+.panel:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    height: 100vh;
+    min-height: 30em;
+    background: url(img/banner.jpg) no-repeat center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+nav{
+    padding: 1.5em 2.5em;
+    position: relative;
+}
+
+.menu-btn{
+    display: none;
+}
+
+.brand{
+    font-size: 1.3em;
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 0.8em;
+    text-align: center;
+}
+
+nav a{
+    color: #fff;
+}
+
+nav a:hover{
+    color: #eee;
+}
+
+/* Header Body */
+.header-body{
+    padding: 2.5em;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.header-body p{
+    max-width: 25em;
+}
+
+/* About Section */
+.heading h2{
+    margin-bottom: 1em;
+}
+
+.heading p{
+    margin-left: 3em;
+    display: inline-block;
+}
+
+.infos{
+    gap: 2em;
+}
+
+.infos, .heading{
+    padding: 5em 1em;
+}
+
+.info img{
+    max-width: 6em;
+    margin-right: 1em;
+}
+
+.info h3{
+    margin-bottom: 0.5em;
+}
+
+.info p{
+    max-width: 15em;
+}
+
+/* Specs Section */
+.specs{
+    background: url(img/banner2.jpg) no-repeat center fixed;
+    background-size: cover;
+    min-height: 40em;
+    position: relative;
+    padding-top: 8em;
+    padding-bottom: 8em;
+}
+
+.specs-header, .specs ul{
+    position: relative;
+    z-index: 1;
+}
+
+.specs ul{
+    width: 40em;
+    margin-top: 3em;
+}
+
+.specs li{
+    padding: 0.6em 0;
+    border-bottom: #555 1px solid;
+}
+
+.specs li span:first-child{
+    color: #888;
+}
+
+/* Panels Section */
+.panels{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 40em;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 8em;
+}
+
+.panel>div{
+    padding: 1em;
+}
+
+.panels-sm{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.panel:first-child, .panel:last-child{
+    padding: 1em;
+}
+
+.panel:first-child{
+    background: #5bc7ca;
+}
+
+.panel:last-child{
+    background: #fff;
+    color: #555;
+}
+
+.panel:nth-child(2){
+    background: url(img/panel1.jpg) no-repeat center;
+}
+
+.panel:nth-child(3){
+    background: url(img/panel2.jpg) no-repeat center;
+}
+
+.panel:nth-child(2),
+.panel:nth-child(3){
+    background-size: cover;
+    position: relative;
+}
+
+/* Set all image dark overlays */
+.specs::before,
+.panel:nth-child(2)::before,
+.panel:nth-child(3)::before{
+    content: '';
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.panel h2{
+    margin: 0.7em 0;
+}
+
+.panel-lg{
+    background: url(img/panel3.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.icon{
+    font-size: 2em;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.panel:first-child .icon{
+    border: 3px #fff solid;
+}
+
+.panel:nth-child(4) .icon{
+    border: 3px #555 solid;
+}
+
+/* Stats Section */
+.car-stats{
+    padding: 5em 1em;
+}
+
+.stats{
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.stats > div{
+    margin-bottom: 1em;
+    position: relative;
+    min-width: 10em;
+}
+
+.stats > div h1:nth-child(2){
+    color: #282828;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    font-size: 2.5em;
+    font-weight: 800;
+}
+
+.stats h5{
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.7em;
+}
+
+.counter{
+    margin: 0.1em 0;
+}
+
+.car{
+    padding: 4em 1em 4em 1em;
+    margin-top: 8em;
+}
+
+/* The circle design */
+.circle{
+    border: 2px #ccc solid;
+    border-radius: 50%;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    background: #161616;
+    animation: glow 4s ease-in-out infinite;
+    aspect-ratio: 3/1;
+}
+
+.car img{
+    width: 70%;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.circle div{
+    border: inherit;
+    border-radius: inherit;
+    background: inherit;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: inherit;
+}
+
+.circle .inner-md-circle{
+    width: 75%;
+    height: 75%;
+    top: 10%;
+    animation-delay: 3s;
+}
+
+.circle .inner-sm-circle{
+    width: 50%;
+    height: 50%;
+    top: 20%;
+    animation-delay: 6s;
+}
+
+/* Circle Glow animation */
+@keyframes glow{
+    0%{
+        box-shadow: none;
+    }
+    50%{
+        box-shadow: 0 0 3em #5bc7ca;
+    }
+    100%{
+        box-shadow: none;
+    }
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+    .menu-btn{
+        display: block;
+        font-size: 1.2em;
+        cursor: pointer;
+    }
+    .menu-btn:hover{
+        color: #eee;
+    }
+    .brand, .menu-btn{
+        position: relative;
+        z-index: 1;
+    }
+    .menu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        background: #161616;
+        width: 100%;
+        z-index: 0;
+        height: 0;
+        overflow-y: hidden;
+        transition: 0.6s ease-in-out;
+    }
+    /* Open class for JS */
+    .menu-open{
+        height: 17em;
+        padding: 5em 0 1em 0;
+    }
+    .menu li{
+        display: block;
+        margin: 1em 0;
+    }
+    .specs ul{
+        width: 80vw;
+    }
+    .infos, .info, .stats{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .infos{
+        gap: 3em;
+    }
+    .info img{
+        margin: 0 0 1em 0;
+    }
+    .panels, .panels-sm{
+        grid-template-columns: 1fr;
+    }
+    .panel, .panel-lg{
+        min-height: 15em;
+    }
+    .panel:nth-child(2){
+        order: 1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html{
+        font-size: 14px;
+    }
+}
